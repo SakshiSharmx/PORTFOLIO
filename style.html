@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakshi Sharma | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    html {
+      scroll-behavior: smooth; /* Smooth scrolling */
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Dark gradient */
+      color: #fff;
+      line-height: 1.6;
+      overflow-y: scroll;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3); /* subtle overlay */
+      z-index: -1;
+    }
+
+    section {
+      padding: 80px 20px; /* continuous scrolling spacing */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 250px; height: 250px;
+      border-radius: 50%;
+      border: 6px solid #a855f7;
+      box-shadow: 0 0 30px #a855f7;
+    }
+    .hero h1 { margin-top: 30px; font-size: 2.5rem; font-weight: bold; }
+    .highlight { color: #a855f7; }
+    .hero p { margin-top: 10px; font-size: 1.2rem; color: #d1d5db; }
+
+    section h2 { margin-bottom: 20px; color: #a855f7; font-size: 2rem; }
+
+    .about p { max-width: 800px; font-size: 1rem; color: #d1d5db; }
+
+    .skills-pyramid { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+    .skill-row { display: flex; justify-content: center; gap: 20px; }
+    .skill-box {
+      background: #111; padding: 20px 25px; border-radius: 12px; text-align: center;
+      font-size: 1rem; transition: transform 0.3s, box-shadow 0.3s, background 0.3s; cursor: pointer;
+    }
+    .skill-box:hover {
+      transform: scale(1.1); box-shadow: 0 0 15px #a855f7;
+      background: linear-gradient(135deg, #a855f7, #facc15); color: #fff;
+    }
+
+    .projects-container { margin-top: 40px; }
+    .projects-grid { display: flex; justify-content: center; }
+    .project-box {
+      background: #1a1a1a; padding: 25px; border-radius: 15px; text-align: center;
+      font-size: 1rem; color: #fff; box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+      transition: transform 0.4s, box-shadow 0.4s, background 0.4s; cursor: pointer;
+    }
+    .project-box:hover {
+      transform: translateY(-10px); box-shadow: 0 10px 20px #a855f7;
+      background: linear-gradient(135deg, #06b6d4, #a855f7); color: #fff;
+    }
+
+    .contact p { margin: 10px 0; font-size: 1.1rem; color: #d1d5db; }
+    .socials { display: flex; gap: 30px; justify-content: center; margin-top: 20px; }
+    .socials a {
+      display: flex; align-items: center; gap: 8px; color: #fff;
+      transition: color 0.3s, transform 0.3s; font-size: 1.5rem; text-decoration: none;
+    }
+    .socials a:hover { color: #a855f7; transform: scale(1.1); }
+
+    /* Floating Navigation Dots */
+    .nav-dots {
+      position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+      display: flex; flex-direction: column; gap: 12px; z-index: 100;
+    }
+    .nav-dots a { width: 14px; height: 14px; background: #555; border-radius: 50%; display: block; transition: background 0.3s, transform 0.3s; }
+    .nav-dots a:hover { background: #a855f7; transform: scale(1.2); }
+    .nav-dots a.active { background: #a855f7; }
+  </style>
+</head>
+<body>
+
+  <div class="nav-dots">
+    <a href="#hero" class="active"></a>
+    <a href="#about"></a>
+    <a href="#skills"></a>
+    <a href="#contact"></a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <img src="image.jpg.jpeg" alt="">
+    <h1>Hey, this is <span class="highlight">Sakshi Sharma!</span></h1>
+    <p>Innovating with Code<br>Building Tomorrow, One Line at a Time</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am Sakshi Sharma, a passionate Computer Science student at Marwadi University. 
+      With strong interests in coding, technology, and building impactful projects, 
+      I aim to solve real-world problems through innovative solutions. 
+      Alongside academics, I enjoy exploring creative ideas and enhancing my skills in 
+      programming, UI design, and emerging technologies.With a passion for crafting elegant solutions and a knack for logical problem-solving, I thrive at the intersection of technology and creativity. My journey in coding has been driven by a curiosity for exploring new possibilities. Over the years, I've honed my skills into c,python,web develpoment and solving out Data Structure and Algorithms.
+Beyond the world of code, I am deeply fascinated by art and design, which fuels my creativity and attention to detail in software development. This unique blend of interests allows me to approach challenges with both analytical precision and imaginative flair.
+I am constantly seeking opportunities to push the boundaries of what's possible, whether it's through exploring emerging technologies. My goal is to combine my technical expertise with my artistic sensibility to create impactful and innovative solutions.
+
+    </p>
+  </section>
+
+  <!-- Skills & Projects Section -->
+  <section id="skills" class="skills">
+    <h2>Skills & Projects</h2>
+
+    <div class="skills-pyramid">
+      <div class="skill-row"><div class="skill-box">C</div></div>
+      <div class="skill-row"><div class="skill-box">Python</div><div class="skill-box">Java</div></div>
+      <div class="skill-row"><div class="skill-box">HTML & CSS</div><div class="skill-box">DBMS</div><div class="skill-box">Bootstrap</div></div>
+      <div class="skill-row"><div class="skill-box">React</div></div>
+    </div>
+
+    <div class="projects-container">
+      <h3 style="color:#a855f7; margin-bottom:15px;">My Projects</h3>
+      <div class="projects-grid"><div class="project-box">Parallax Website</div></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>📧 Email: sakshi.sharx@gmail.com</p>
+    <p>📍 Location: Bokaro steel city, INDIA</p>
+    <div class="socials">
+      <a href="https://github.com/SakshiSharmx" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/sakshi-sharma-12187a324" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/sakshi_sharx?igsh=MWxzZDhieXhnemVlbw==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navDots = document.querySelectorAll(".nav-dots a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) current = section.getAttribute("id");
+      });
+      navDots.forEach(dot => { dot.classList.remove("active"); if(dot.getAttribute("href")==="#" + current) dot.classList.add("active"); });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
